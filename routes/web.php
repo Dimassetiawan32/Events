@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'kegiatan'], function(){
+    Route::get('index', 'KegiatanController@index')->name('backend.kegiatan.index');
+    Route::get('create', 'KegiatanController@create')->name('backend.kegiatan.create');
+});

@@ -23,3 +23,12 @@ Route::group(['prefix' => 'kegiatan'], function(){
     Route::get('index', 'KegiatanController@index')->name('backend.kegiatan.index');
     Route::get('create', 'KegiatanController@create')->name('backend.kegiatan.create');
 });
+
+Route::group(['prefix' => 'users'], function(){
+    Route::get('index', 'User\UserController@index')->name('users');
+}); 
+
+Route::group(['prefix' => 'registers'], function(){
+    Route::get('index', 'Register\RegisterController@index')->name('registers');
+    Route::get('ambil-formulir', 'Register\RegisterController@create')->name('registers.ambil-formulir');
+});

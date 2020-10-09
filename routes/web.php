@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'kegiatan'], function(){
     Route::get('index', 'KegiatanController@index')->name('backend.kegiatan.index');
     Route::get('create', 'KegiatanController@create')->name('backend.kegiatan.create');
+    Route::get('formEdit','KegiatanController@edit')->name('backend.kegiatan.formEdit');    
 });
 
 Route::group(['prefix' => 'users'], function(){
@@ -31,4 +32,5 @@ Route::group(['prefix' => 'users'], function(){
 Route::group(['prefix' => 'registers'], function(){
     Route::get('index', 'Register\RegisterController@index')->name('registers');
     Route::get('ambil-formulir', 'Register\RegisterController@create')->name('registers.ambil-formulir');
+    Route::get('show', 'Register\RegisterController@show')->name('registers.show');
 });

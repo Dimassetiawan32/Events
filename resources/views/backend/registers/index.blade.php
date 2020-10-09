@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <div class="d-flex px-2 py-2">
                         <div>
-                            <a href="{{route('registers.ambil-formulir')}}" class="btn btn-info ">Register</a>
+                            <a href="{{route('registers.ambil-formulir')}}" class="btn btn-outline-primary ">Daftar</a>
                         </div>
                         <div></div>
                     </div>
@@ -32,7 +32,7 @@
                                     <td>17082020</td>
                                     <td>Menunggu</td>
                                     <td>
-                                        <a href="http://" class="btn btn-sm btn-info">Show</a>
+                                        <a href="{{route('registers.show')}}" class="btn btn-sm btn-outline-primary">Show</a>
                                     </td>
                                 </tr>
                             </tbody>

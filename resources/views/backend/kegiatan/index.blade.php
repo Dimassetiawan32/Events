@@ -33,7 +33,7 @@
                                 <td>ada</td>
                                 <td>operasi</td>
                                 <td>
-                                    <a href="" class="btn btn-outline-primary btn-sm">Edit</a>
+                                    <a href="{{route('backend.kegiatan.formEdit')}}" class="btn btn-outline-primary btn-sm">Edit</a>
                                     <a href="" class="btn btn-outline-danger btn-sm">Hapus</a>
                                 </td>
                             </tr>

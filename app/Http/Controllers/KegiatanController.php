@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
+use App\Kegiatan;
 use Illuminate\Http\Request;
 
 class KegiatanController extends Controller
@@ -11,9 +12,20 @@ class KegiatanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public $kegiatans;
+
+    public function __construct()
     {
-        return view("backend.kegiatan.index");
+        $this->kegiatans = new Kegiatan ();
+    }
+    
+    public function index()
+    {  
+        
+        dd($this->kegiatans->generateCode());
+         /* $date = Carbon::now('Asia/Jakarta');
+        dd($date); */
+        /* return view("backend.kegiatan.index"); */
     }
 
     /**
@@ -54,9 +66,9 @@ class KegiatanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('backend.kegiatan.edit');
     }
 
     /**

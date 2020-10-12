@@ -21,7 +21,7 @@ class CreateKegiatansTable extends Migration
             $table->string('keterangan');
             $table->string('status_kegiatan');
             $table->string('harga_tiket');
-            $table->string('file');
+            $table->string('images');
             $table->string('kapasitas');
             $table->timestamps();
         });

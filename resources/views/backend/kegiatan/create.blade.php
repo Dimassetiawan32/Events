@@ -22,6 +22,7 @@
                                 </div>
                             </div>
                             {{$errors->first('name')}}
+
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Nama Kegiatan</label>
@@ -32,7 +33,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Tanggal</label>
-                                    <input type="text" name="tanggal" class="form-control" id="" >
+                                    <input type="date" name="tanggal" class="form-control" id="" >
                                 </div>
                             </div>
 
@@ -67,13 +68,13 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="">Informasi</label>
-                                    <textarea name="" id="" class="form-control"></textarea>
+                                    <textarea name="keterangan" id="" class="form-control"></textarea>
                                 </div>
                             </div>
 
                         </div>
                         <div class="">
-                            <button type="submit" class="btn btn-outline-info">Masukan Kegiatan Baru</button>
+                            <button type="submit" class="btn btn-outline-info">Save</button>
                             <a href="{{route('backend.kegiatan.index')}}" class="btn btn-outline-secondary">Kembali</a>
                         </div>
                     </form>

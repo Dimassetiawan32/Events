@@ -16,15 +16,14 @@ class KegiatanController extends Controller
 
     public function __construct()
     {
-        $this->kegiatans = new Kegiatan ();
+        $this->kegiatan = new Kegiatan ();
     }
     
     public function index()
     {  
-        // $date = Carbon::now('Asia/Jakarta');
-        // dd($date);
-        
-        return view("backend.kegiatan.index");
+       $kegiatans = Kegiatan::all();
+       
+        return view("backend.kegiatan.index", compact('kegiatans'));
     }
 
     /**
@@ -34,7 +33,7 @@ class KegiatanController extends Controller
      */
     public function create()
     {   
-        $getKode = $this->kegiatans->generateCode();
+        $getKode = $this->kegiatan->generateCode();
         
         return view("backend.kegiatan.create",compact('getKode'));
     }
@@ -49,21 +48,20 @@ class KegiatanController extends Controller
     {
         $kegiatan = Kegiatan::create($this->validateRequest());
         $this->storeImage($kegiatan);
-
-        return redirect()->back()->with(['succes' => 'Kegiatan Berhasil Dibuat']);
+        return redirect()->back()->with(['success' => 'Kegiatan Berhasil Dibuat']);
     }
 
     private function validateRequest()
     {
         return tap(request()->validate([
-            'kode_kegiatan' => 'required',
-            'nama_kegiatan' => 'required',
-            'tanggal' => 'required',
-            'keterangan' => 'required',
-            'status_kegiatan' => 'required',
-            'harga_tiket' => 'required',
-            'images' => 'file|image|max:5000',
-            'kapasitas' => 'required',
+            'kode_kegiatan'     => 'required',
+            'nama_kegiatan'     => 'required',
+            'tanggal'           => 'required',
+            'keterangan'        => 'required',
+            'status_kegiatan'   => 'required',
+            'harga_tiket'       => 'required',
+            'images'            => 'file|image|max:5000',
+            'kapasitas'         => 'required',
         ]), function(){
             if(request()->hasFile('images')){
                 request()->validate([
@@ -81,6 +79,11 @@ class KegiatanController extends Controller
 
             $image->save();
         }
-    } 
+    }
+    public function edit()
+    {
+        return view("backend.kegiatan.edit");
+    }
+
 }  
 

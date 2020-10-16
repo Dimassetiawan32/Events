@@ -18,25 +18,25 @@
                         <thead>
                             <tr>
                                 <th>Kode kegiatan</th>
-                                <th>Nama Kegiatan</th>
                                 <th>Tanggal</th>
-                                <th>Informasi</th>
                                 <th>Status</th>
                                 <th>Option</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($kegiatans as $kegiatan)
                             <tr>
-                                <td>2342</td>
-                                <td>Pengajian</td>
-                                <td>10/10/10</td>
-                                <td>ada</td>
-                                <td>operasi</td>
                                 <td>
-                                    <a href="{{route('backend.kegiatan.formEdit')}}" class="btn btn-outline-primary btn-sm">Edit</a>
+                                <a href="{{route('backend.kegiatan.formEdit')}}" class="btn btn-outline-primary btn-sm">{{$kegiatan->kode_kegiatan}}</a>
+                                </td>
+                                <td>{{$kegiatan->tanggal}}</td>
+                                <td>{{$kegiatan->status_kegiatan}}</td>
+                                </td>
+                                <td>
                                     <a href="" class="btn btn-outline-danger btn-sm">Hapus</a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -27,7 +27,7 @@
                             @foreach($kegiatans as $kegiatan)
                             <tr>
                                 <td>
-                                <a href="{{route('backend.kegiatan.formEdit')}}" class="btn btn-outline-primary btn-sm">{{$kegiatan->kode_kegiatan}}</a>
+                                <a href="{{route('backend.kegiatan.formEdit', $kegiatan->id)}}" class="btn btn-outline-primary btn-sm">{{$kegiatan->kode_kegiatan}}</a>
                                 </td>
                                 <td>{{$kegiatan->tanggal}}</td>
                                 <td>{{$kegiatan->status_kegiatan}}</td>

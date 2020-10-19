@@ -80,10 +80,18 @@ class KegiatanController extends Controller
             $image->save();
         }
     }
-    public function edit()
+    public function edit($id)
     {
-        return view("backend.kegiatan.edit");
+        
+        $kegiatan = Kegiatan::findOrFail($id);
+        return view("backend.kegiatan.edit", compact('kegiatan'));
     }
-
+    
+    public function update(Kegiatan $kegiatan)
+    {
+        $kegiatan->update($this->validateRequest());
+        $this->storeImage($kegiatan);
+        return redirect()->back()->with(['success' => 'Kegiatan Berhasil Diperbarui']);
+    }
 }  
 

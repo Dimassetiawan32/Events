@@ -23,7 +23,8 @@ Route::group(['prefix' => 'kegiatan'], function(){
     Route::get('index', 'KegiatanController@index')->name('backend.kegiatan.index');
     Route::get('create', 'KegiatanController@create')->name('backend.kegiatan.create');
     Route::post('save','KegiatanController@store')->name('kegiatan.save'); 
-    Route::get('formEdit','KegiatanController@edit')->name('backend.kegiatan.formEdit');
+    Route::get('formEdit/{kegiatan}','KegiatanController@edit')->name('backend.kegiatan.formEdit');
+    Route::patch('update/{kegiatan}','KegiatanController@update')->name('backend.kegiatan.update');
 
 });
 

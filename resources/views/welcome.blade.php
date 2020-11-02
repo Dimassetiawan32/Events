@@ -27,7 +27,7 @@
                 <a href="" class="nav-link">
                     <h6 class="text-muted">Home</h6>
                 </a>
-                <a href="{{route('backend.kegiatan.index')}}" class="nav-link">
+                <a href="{{route('users.kegiatan.index')}}" class="nav-link">
                     <h6 class="text-muted">Kegiatan</h6>
                 </a>
                 <a href="" class="nav-link">
@@ -116,7 +116,10 @@
                                 <div class="card-body">
                                     <h3>Comingsoon Activity</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum tortor mauris.</p>
-                                    <button type="button" class="btn btn-outline-danger btn-lg btn-block" disabled>Daftar</button>
+                                    <button type="button" class="btn btn-outline-danger btn-lg btn-block" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Coming Soon
+                                    </button>
                                 </div>
                             </div>
                         </div>

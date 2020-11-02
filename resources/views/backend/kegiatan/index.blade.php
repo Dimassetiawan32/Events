@@ -33,7 +33,11 @@
                                 <td>{{$kegiatan->status_kegiatan}}</td>
                                 </td>
                                 <td>
-                                    <a href="" class="btn btn-outline-danger btn-sm">Hapus</a>
+                                    <form action="{{route('backend.kegiatan.delete', $kegiatan->id)}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                        <button href="" class="btn btn-outline-danger btn-sm">Hapus</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

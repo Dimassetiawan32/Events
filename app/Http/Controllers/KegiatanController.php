@@ -93,5 +93,17 @@ class KegiatanController extends Controller
         $this->storeImage($kegiatan);
         return redirect()->back()->with(['success' => 'Kegiatan Berhasil Diperbarui']);
     }
+
+    public function destroy(Kegiatan $kegiatan)
+    {
+        $kegiatan->delete();
+
+        if(\File::exists(public_path('storage/'. $kegiatan->images)))
+        {
+            \File::delete(public_path('storage/'. $kegiatan->images));
+        }
+        return redirect()->back()->with(['success'=>'Kegiatan Berhasil dihapus']);
+    }
+
 }  
 

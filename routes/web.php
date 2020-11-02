@@ -25,6 +25,7 @@ Route::group(['prefix' => 'kegiatan'], function(){
     Route::post('save','KegiatanController@store')->name('kegiatan.save'); 
     Route::get('formEdit/{kegiatan}','KegiatanController@edit')->name('backend.kegiatan.formEdit');
     Route::patch('update/{kegiatan}','KegiatanController@update')->name('backend.kegiatan.update');
+    Route::delete('delete/{kegiatan}','KegiatanController@destroy')->name('backend.kegiatan.delete');
 
 });
 

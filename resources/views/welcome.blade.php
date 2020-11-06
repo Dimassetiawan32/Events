@@ -104,7 +104,7 @@
                                 <div class="card-body">
                                     <h3>Active Activity</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum tortor mauris.</p>
-                                    <button type="button" class="btn btn-outline-primary btn-lg btn-block">Daftar</button>
+                                    <button type="button" class="btn btn-outline-primary btn-block">Daftar</button>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                 <div class="card-body">
                                     <h3>Comingsoon Activity</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum tortor mauris.</p>
-                                    <button type="button" class="btn btn-outline-danger btn-lg btn-block" disabled>
+                                    <button type="button" class="btn btn-outline-danger btn-block" disabled>
                                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                         Coming Soon
                                     </button>

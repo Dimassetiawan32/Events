@@ -12,7 +12,7 @@
         </ol>
     </nav>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 mb-2">
             <div class="card border-0">
                 <div class="card-body">
                     <div class="d-flex">
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 mb-2">
             <div class="card border-0">
                 <div class="card-body">
                     <div class="d-flex">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 mb-2">
             <div class="card border-0">
                 <div class="card-body">
                     <div class="d-flex">
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 mb-2">
             <div class="card border-0">
                 <div class="card-body">
                     <div class="d-flex">
